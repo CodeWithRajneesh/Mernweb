@@ -23,7 +23,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${url} /api/auth/register`, user, {
+      const response = await axios.post(`${url}/api/auth/register`, user, {
         headers: {
           "Content-Type": "application/json",
         },
