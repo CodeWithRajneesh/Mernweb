@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [services, setServices] = useState([]);
 
   const authorizationToken = `Bearer ${token}`;
+  const url = "https://mernwebbackend-40lw.onrender.com";
 
   const storeTokenInLS = (serverToken) => {
     setToken(serverToken); // Update token in state
@@ -30,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   const Authentication = async () => {
     try {
       setIsloading(true);
-      const response = await axios.get("http://localhost:5000/api/auth/user", {
+      const response = await axios.get(`${url}/api/auth/user`, {
         headers: {
           Authorization: authorizationToken,
         },
@@ -57,9 +58,7 @@ export const AuthProvider = ({ children }) => {
   // Fetch Service Data from Database
   const getServices = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/data/service"
-      );
+      const response = await axios.get(`${url}/api/data/service`);
       setServices(response.data);
     } catch (error) {
       console.error("Error fetching services:", error);
@@ -81,6 +80,7 @@ export const AuthProvider = ({ children }) => {
         services,
         isloading,
         authorizationToken,
+        url,
       }}
     >
       {children}

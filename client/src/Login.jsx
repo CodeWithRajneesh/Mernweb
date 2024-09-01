@@ -10,9 +10,9 @@ const Login = () => {
     email: "",
     password: "",
   });
-
+ 
   const navigate = useNavigate();
-  const { storeTokenInLS } = useAuth();
+  const { storeTokenInLS,url } = useAuth();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,7 +24,7 @@ const Login = () => {
     console.log(form);
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/auth/login`,
+        `${url}/api/auth/login`,
         form,
         {
           headers: {

@@ -10,21 +10,18 @@ const UpdateUser = ({ userId, onClose }) => {
     phone: "",
   });
 
-  const { token } = useAuth(); // Get the token from the useAuth hook
+  const { token, url } = useAuth(); // Get the token from the useAuth hook
 
   // Fetch user data by ID
   const getUserById = async () => {
     if (!userId) return;
 
     try {
-      const response = await axios.get(
-        `http://localhost:5000/api/admin/users/${userId}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/users/${userId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       if (response.status === 200) {
         setFormData(response.data);
       }
@@ -47,7 +44,7 @@ const UpdateUser = ({ userId, onClose }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/admin/users/update/${userId}`,
+        `${url}/api/admin/users/update/${userId}`,
         formData,
         {
           headers: {

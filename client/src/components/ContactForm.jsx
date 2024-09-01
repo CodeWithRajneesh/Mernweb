@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const ContactForm = () => {
-  const { user } = useAuth();
+  const { user, url } = useAuth();
   const navigate = useNavigate();
   const [form, setForm] = useState({
     username: "",
@@ -33,15 +33,11 @@ const ContactForm = () => {
     e.preventDefault();
     console.log(form);
     try {
-      const response = await axios.post(
-        `http://localhost:5000/api/form/contact`,
-        form,
-        {
-          header: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post(`${url}/api/form/contact`, form, {
+        header: {
+          "Content-Type": "application/json",
+        },
+      });
       console.log("Message sent successfully", response.data);
       toast.success("Message sent successfully");
       navigate("/");
@@ -87,7 +83,9 @@ const ContactForm = () => {
             </Link>
 
             <div className="mx-5">
-              <h2 className="text-xl text-yellow-400 my-1 font-bold">Address</h2>
+              <h2 className="text-xl text-yellow-400 my-1 font-bold">
+                Address
+              </h2>
               <p className="text-gray-400">
                 Vill-Karaura, Teh-Meerganj, Dist-Bareilly, Pincode-243504
               </p>
@@ -119,7 +117,9 @@ const ContactForm = () => {
               </svg>
             </Link>
             <div className="mx-5">
-              <h2 className="text-xl my-1 text-yellow-400 font-bold">Call Us</h2>
+              <h2 className="text-xl my-1 text-yellow-400 font-bold">
+                Call Us
+              </h2>
               <p className="text-gray-400">+91 7248362369</p>
             </div>
           </div>
@@ -149,7 +149,9 @@ const ContactForm = () => {
               </svg>
             </Link>
             <div className="mx-5">
-              <h2 className="text-xl my-1 text-yellow-400  font-bold">Email Us</h2>
+              <h2 className="text-xl my-1 text-yellow-400  font-bold">
+                Email Us
+              </h2>
               <p className="text-gray-400">rajneesh847495@gmail.com</p>
             </div>
           </div>

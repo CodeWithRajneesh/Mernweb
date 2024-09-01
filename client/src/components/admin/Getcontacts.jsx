@@ -6,12 +6,12 @@ import { toast } from "react-toastify";
 const GetContacts = () => {
   const [contacts, setContacts] = useState([]);
 
-  const { token } = useAuth();
+  const { token, url } = useAuth();
 
   const fetchAllContacts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/admin/contacts",
+        `${url}/api/admin/contacts`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -32,7 +32,7 @@ const GetContacts = () => {
   const deleteContact = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/admin/contacts/delete/${id}`,
+        `${url}/api/admin/contacts/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

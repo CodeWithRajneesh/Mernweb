@@ -8,13 +8,13 @@ const Getusers = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
   const [users, setUsers] = useState([]);
-  const { authorizationToken } = useAuth();
+  const { authorizationToken,url } = useAuth();
 
   // Fetch all users
   const fetchAllUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/admin/users",
+        `${url}/api/admin/users`,
         {
           headers: {
             Authorization: authorizationToken,
@@ -32,7 +32,7 @@ const Getusers = () => {
   const deleteUser = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/admin/users/delete/${id}`,
+        `${url}/api/admin/users/delete/${id}`,
         {
           headers: {
             Authorization: authorizationToken,

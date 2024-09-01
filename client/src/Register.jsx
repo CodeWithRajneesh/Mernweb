@@ -13,7 +13,7 @@ const Register = () => {
   });
 
   const navigate = useNavigate();
-  const { storeTokenInLS } = useAuth();
+  const { storeTokenInLS, url } = useAuth();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,15 +23,11 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        `http://localhost:5000/api/auth/register`,
-        user,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post(`${url} /api/auth/register`, user, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       const res = response.data;
 
       if (response.status === 201) {
