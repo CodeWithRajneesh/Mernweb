@@ -1,0 +1,41 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "server": "npm run start --prefix ../server",
+    "dev": "concurrently \"npm run start\" \"npm run server\""
+  },
+  "dependencies": {
+    "@material-tailwind/html": "^2.2.2",
+    "aos": "^2.3.4",
+    "axios": "^1.7.3",
+    "framer-motion": "^12.0.0-alpha.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-intersection-observer": "^9.13.0",
+    "react-router-dom": "^6.26.0",
+    "react-toastify": "^10.0.5",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.7",
+    "vite": "^5.3.4"
+  }
+}

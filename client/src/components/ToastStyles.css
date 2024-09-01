@@ -1,0 +1,25 @@
+
+/* toastStyles.css */
+
+.custom-toast-success {
+  background-color: #22c55e; /* green-500 */
+  color:#ffffff ; /* white */
+}
+
+.custom-toast-error {
+  background-color: #ef4444; /* red-500 */
+  color: #ffffff; /* white */
+}
+
+.custom-progress {
+  background-color: #ffffff; /* white */
+}
+
+.toastBody {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff; /* white text */
+}
+
+.custom-icon {
+  color: #ffffff; /* white icon */
+}
