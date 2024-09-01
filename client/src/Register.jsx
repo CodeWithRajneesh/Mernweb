@@ -65,7 +65,7 @@ const Register = () => {
               className="mt-8 w-[17rem] h-[19rem] object-cover lg:w-[18rem] lg:h-[20rem]"
             />
           </div>
-          <div className="w-full lg:w-[35%] bg-gray-950 hover:shadow-2xl hover:shadow-cyan-400 p-2 mt-10 lg:mt-0 ">
+          <div className="w-full lg:w-[35%] bg-gray-950 hover:shadow-2xl hover:shadow-cyan-400 p-2 mt-1 rounded-md0 lg:mt-0 ">
             <form onSubmit={handleSubmit} className="mx-auto w-[90%] p-2">
               <div className="mb-4">
                 <label
@@ -78,7 +78,7 @@ const Register = () => {
                   type="text"
                   id="username"
                   name="username"
-                  className="w-full bg-gray-900 placeholder:text-slate-200 p-2 mt-1 text-black text-sm "
+                  className="w-full bg-gray-900 placeholder:text-slate-400 p-2 mt-1 rounded-md text-white text-sm "
                   placeholder="Enter username"
                   autoComplete="off"
                   required
@@ -97,7 +97,7 @@ const Register = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className="w-full bg-gray-900 placeholder:text-slate-200 p-2 mt-1 text-black text-sm "
+                  className="w-full bg-gray-900 placeholder:text-slate-400 p-2 mt-1 rounded-md text-white text-sm "
                   placeholder="Enter your email"
                   required
                   autoComplete="off"
@@ -116,7 +116,7 @@ const Register = () => {
                   type="tel"
                   name="phone"
                   id="phone"
-                  className="w-full bg-gray-900 placeholder:text-slate-200 p-2 mt-1 text-black text-sm "
+                  className="w-full bg-gray-900 placeholder:text-slate-400 p-2 mt-1 rounded-md text-white text-sm "
                   placeholder="Enter phone number"
                   required
                   autoComplete="off"
@@ -135,7 +135,7 @@ const Register = () => {
                   type="password"
                   id="password"
                   name="password"
-                  className="w-full bg-gray-900 placeholder:text-slate-200 p-2 mt-1 text-black text-sm "
+                  className="w-full bg-gray-900 placeholder:text-slate-400 p-2 mt-1 rounded-md text-white text-sm "
                   placeholder="Enter password"
                   required
                   autoComplete="off"

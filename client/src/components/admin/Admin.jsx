@@ -14,7 +14,7 @@ const Admin = () => {
   }
 
   return (
-    <section className=" sm:flex   bg-black mt-16 sm:h-screen">
+    <section id="admin" className=" sm:flex   bg-black mt-16 sm:h-screen">
       <div className="flex-shrink-0 sm:w-full md:w-64 md:h-full sm:flex sm:flex-wrap border-r border-gray-700 bg-gray-900 text-yellow-400 p-4">
         <ul className="space-y-4">
           <li>
@@ -92,7 +92,6 @@ const Admin = () => {
         </ul>
       </div>
       <div className="flex-1  p-4 bg-black ">
-     
         <Outlet />
       </div>
     </section>

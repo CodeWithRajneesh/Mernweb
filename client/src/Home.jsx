@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const [text, setText] = useState("");
@@ -30,50 +32,50 @@ const Home = () => {
     return () => clearInterval(timer);
   }, [index, text]);
 
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat w-full h-[40rem] sm:h-screen"
+      className="relative bg-cover sm:mt-16 mt-10 bg-center bg-no-repeat w-full h-[30rem] sm:h-screen"
       style={{
         backgroundImage:
-          "url('https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9980.jpg?ga=GA1.1.1795337513.1723110158&semt=ais_hybrid')",
+          "url('https://cdn.pixabay.com/photo/2023/05/18/23/22/hacker-8003400_1280.jpg')",
       }}
     >
-      <div className="flex flex-col sm:flex-row items-center justify-center h-full px-4 sm:px-8 md:px-16 text-center sm:text-left">
-        <div className="mb-8 sm:mb-0 sm:mr-16">
+      <div
+        id="home"
+        className="flex flex-col sm:flex-row items-center  h-full px-4 sm:px-8 md:px-16  sm:text-left"
+      >
+        <div className="mb-8 sm:mb-32 mt-36 sm:mr-60">
           <span className="text-yellow-400 font-bold text-3xl sm:text-5xl">
             Rajneesh Kumar
           </span>
           <h1 className="text-white font-bold text-xl mt-5 sm:text-2xl whitespace-nowrap overflow-hidden">
-            <span className="typewriter-text">{text}</span>
+            <span className="typewriter-text text-sm">{text}</span>
             <span className="caret blink">|</span>
           </h1>
-          <button
-            type="button"
-            onClick={() => handleClick("contact")}
-            className="text-black bg-yellow-400 mt-12 sm:mt-32 hover:text-black border border-sky-700 font-medium rounded-full text-md px-6 py-2 text-center"
+          <div
+            data-aos="fade-up"
+            className="flex flex-col mt-16 items-center space-y-4 sm:items-start sm:space-y-0 sm:mt-16"
           >
-            <div className="flex items-center gap-3 tracking-wider justify-center">
-              Let's start
-            </div>
-          </button>
-        </div>
-
-        <div className="flex flex-col items-center space-y-4 sm:items-start sm:space-y-0 sm:mt-32">
-          <span className="bg-white bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-3xl">
-            Secure Access
-          </span>
-          <span className="bg-gradient-to-r from-white via-white to-purple-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-3xl">
-            for
-            <span className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-3xl">
-              everyone
+            <span className="bg-gradient-to-r  from-yellow-400 via-green-400 to-white bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-4xl">
+              Secure Access
             </span>
-          </span>
-          <span className="bg-gradient-to-r from-white via-white to-purple-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-3xl">
-            But not
-            <span className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-3xl">
-              just anyone
+            <span className="bg-gradient-to-r  from-white via-white to-purple-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-4xl">
+              for
+              <span className="bg-gradient-to-r pl-3  from-red-500 via-yellow-400 to-red-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-4xl">
+                everyone
+              </span>
             </span>
-          </span>
+            <span className="bg-gradient-to-r from-white via-white to-purple-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-4xl">
+              But not
+              <span className="bg-gradient-to-r pl-3 from-red-500 via-yellow-400 to-red-600 bg-clip-text text-2xl font-bold text-transparent tracking-wider sm:text-4xl">
+                just anyone
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </section>

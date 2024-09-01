@@ -61,7 +61,6 @@ const About = () => {
           </div>
 
           <div className="lg:w-1/2 mx-4">
-          
             <div>
               <h3
                 className="text-lg sm:text-xl font-semibold text-yellow-400 mb-4 cursor-pointer"
