@@ -14,7 +14,7 @@ const adminRoute = require("./router/admin-router")
 // lets tackle cors
 
 const corsOption = {
-    origin: "http://localhost:5173",
+    origin: "https://mernwebfrontend.onrender.com",
     methods: "GET, PUT , POST , PATCH , DELETE , HEAD",
     Credentials: true,
 }
