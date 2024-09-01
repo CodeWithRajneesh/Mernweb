@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 
@@ -41,7 +41,7 @@ userSchema.pre('save', async function (next) {
     const user = this;
     // console.log(this);
     if (!user.isModified("password")) {
-         return next();
+        return next();
     }
     try {
         // const saltRound=10;
