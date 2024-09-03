@@ -68,12 +68,11 @@ const Register = () => {
               className="mt-8 w-[17rem] h-[19rem] object-cover lg:w-[18rem] lg:h-[20rem]"
             />
           </div>
-          <div className="w-full lg:w-[35%] bg-gray-950 hover:shadow-2xl hover:shadow-cyan-400 p-2 mt-1 rounded-md0 lg:mt-0 ">
-            <form
-              data-aos="fade-up"
-              onSubmit={handleSubmit}
-              className="mx-auto w-[90%] p-2"
-            >
+          <div
+            data-aos="fade-up"
+            className="w-full lg:w-[35%] bg-gray-950 hover:shadow-2xl hover:shadow-cyan-400 p-2 mt-1 rounded-md0 lg:mt-0 "
+          >
+            <form onSubmit={handleSubmit} className="mx-auto w-[90%] p-2">
               <div className="mb-4">
                 <label
                   htmlFor="username"
