@@ -1,8 +1,10 @@
 import React from "react";
 import { useAuth } from "./store/Auth";
+import useAOS from "./customhook/CustomHook";
 
 const Service = () => {
   const { services } = useAuth();
+  useAOS();
 
   return (
     <>

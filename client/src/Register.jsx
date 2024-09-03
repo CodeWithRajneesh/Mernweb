@@ -56,7 +56,10 @@ const Register = () => {
       <div className="flex flex-wrap justify-center lg:justify-start p-5 lg:h-full lg:items-center">
         <div className="flex flex-col justify-center sm:flex items-center lg:flex-row lg:items-start lg:w-full">
           <div className="lg:w-1/3">
-            <h1 className="bg-gradient-to-r text-center lg:text-left from-yellow-400 via-blue-500 to-purple-600 bg-clip-text text-3xl text-transparent tracking-wider sm:text-4xl">
+            <h1
+              data-aos="slide-right"
+              className="bg-gradient-to-r text-center lg:text-left from-yellow-400 via-blue-500 to-purple-600 bg-clip-text text-3xl text-transparent tracking-wider sm:text-4xl"
+            >
               Register Here!
             </h1>
             <img
@@ -66,7 +69,11 @@ const Register = () => {
             />
           </div>
           <div className="w-full lg:w-[35%] bg-gray-950 hover:shadow-2xl hover:shadow-cyan-400 p-2 mt-1 rounded-md0 lg:mt-0 ">
-            <form onSubmit={handleSubmit} className="mx-auto w-[90%] p-2">
+            <form
+              data-aos="fade-up"
+              onSubmit={handleSubmit}
+              className="mx-auto w-[90%] p-2"
+            >
               <div className="mb-4">
                 <label
                   htmlFor="username"

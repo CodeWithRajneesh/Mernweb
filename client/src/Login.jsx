@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "./store/Auth";
 import { toast } from "react-toastify";
 import "./components/ToastStyles.css";
+import useAOS from "./customhook/CustomHook";
 
 const Login = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
+  useAOS();
  
   const navigate = useNavigate();
   const { storeTokenInLS,url } = useAuth();
@@ -55,6 +57,7 @@ const Login = () => {
       <div className="p-8 md:p-12 lg:px-16 lg:py-12">
         <div className="mx-auto w-full text-center sm:text-left">
           <h1
+          data-aos="zoom-in-up"
             className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-bold
             text-transparent tracking-wider sm:text-4xl"
           >
@@ -62,6 +65,7 @@ const Login = () => {
           </h1>
           <div className="mt-16 w-fit mx-auto md:mt-10">
             <img
+            data-aos="slide-right"
               alt="Login Illustration"
               src="https://cdn.pixabay.com/photo/2021/06/06/06/24/lock-6314371_1280.png"
               className="sm:w-[19rem] sm:h-[16rem] h-[13rem] w-[15rem] p-5 object-center object-cover"

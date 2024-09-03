@@ -49,8 +49,11 @@ const ContactForm = () => {
 
   return (
     <section className="bg-black">
-      <div className="grid grid-cols-1  gap-8 px-8 py-4 mx-auto border border-gray-900 md:grid-cols-2  dark:text-gray-800">
-        <div className="flex flex-col bg-gray-900 gap-4 p-16 shadow-2xl ">
+      <div className="grid grid-cols-1  gap-8 px-4 py-4 mx-auto border border-gray-900 md:grid-cols-2  dark:text-gray-800">
+        <div
+          data-aos="zoom-in-up"
+          className="flex flex-col bg-gray-900 gap-4 p-8 shadow-2xl "
+        >
           <strong className="text-3xl text-yellow-400">
             Get in touch with me
           </strong>
@@ -83,10 +86,13 @@ const ContactForm = () => {
             </Link>
 
             <div className="mx-5">
-              <h2 className="text-xl text-yellow-400 my-1 font-bold">
+              <h2
+                data-aos="zoom-up"
+                className="text-xl text-yellow-400 my-1 font-bold"
+              >
                 Address
               </h2>
-              <p className="text-gray-400">
+              <p data-aos="slide-right" className="text-gray-400">
                 Vill-Karaura, Teh-Meerganj, Dist-Bareilly, Pincode-243504
               </p>
             </div>
@@ -117,10 +123,15 @@ const ContactForm = () => {
               </svg>
             </Link>
             <div className="mx-5">
-              <h2 className="text-xl my-1 text-yellow-400 font-bold">
+              <h2
+                data-aos="fade-up"
+                className="text-xl my-1 text-yellow-400 font-bold"
+              >
                 Call Us
               </h2>
-              <p className="text-gray-400">+91 7248362369</p>
+              <p data-aos="slide-right" className="text-gray-400">
+                +91 7248362369
+              </p>
             </div>
           </div>
 
@@ -149,17 +160,23 @@ const ContactForm = () => {
               </svg>
             </Link>
             <div className="mx-5">
-              <h2 className="text-xl my-1 text-yellow-400  font-bold">
+              <h2
+                data-aos="fade-up"
+                className="text-xl my-1 text-yellow-400  font-bold"
+              >
                 Email Us
               </h2>
-              <p className="text-gray-400">rajneesh847495@gmail.com</p>
+              <p data-aos="slide-right" className="text-gray-400">
+                rajneesh847495@gmail.com
+              </p>
             </div>
           </div>
         </div>
 
         <form
+          data-aos="fade-up"
           onSubmit={handleSubmit}
-          className="p-14 space-y-6 shadow-2xl bg-gray-900"
+          className="p-8 space-y-6 shadow-2xl bg-gray-900"
         >
           <div>
             <label htmlFor="username" className=" text-yellow-400 text-xl">

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useAOS from "./customhook/CustomHook";
 
 const About = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  useAOS();
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -27,16 +29,23 @@ const About = () => {
             />
           </div>
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-1/2 p-3 sm:p-5">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-yellow-400 font-bold">
+            <h1
+              data-aos="fade-up"
+              className="text-3xl sm:text-4xl lg:text-5xl text-yellow-400 font-bold"
+            >
               React JS Full
               <span className="text-white">stack</span> Developer
             </h1>
-            <p className="mt-4 mb-6 text-gray-300 text-base sm:text-lg">
+            <p
+              data-aos="fade-up"
+              className="mt-4 mb-6 text-gray-300 text-base sm:text-lg"
+            >
               React JS Developer at Railworld India Pvt Ltd, working on leading
               e-commerce websites, enhancing user engagement and increasing
               sales.
             </p>
             <Link
+              data-aos="zoom-in"
               to="/service"
               className="px-4 sm:px-6 py-2 text-sm sm:text-lg font-semibold rounded bg-green-800 text-gray-200 hover:bg-gray-300 hover:text-black border border-gray-700"
             >
@@ -52,7 +61,10 @@ const About = () => {
             <h3 className="text-xl sm:text-2xl text-yellow-400 font-semibold mb-4">
               Frequently Asked Questions
             </h3>
-            <p className="text-gray-400 text-sm sm:text-base">
+            <p
+              data-aos="fade-left"
+              className="text-gray-400 text-sm sm:text-base"
+            >
               Do you have any questions about my services? Check out my FAQ
               section for quick answers to common queries. If you can’t find
               what you’re looking for, feel free to contact me directly – I’m

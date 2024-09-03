@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import useAOS from "./customhook/CustomHook";
 
 const Home = () => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const phrases = ["I'm a Mern Stack Developer"];
-
+  useAOS();
   useEffect(() => {
     let timer;
     if (index < phrases.length) {
@@ -31,10 +30,6 @@ const Home = () => {
 
     return () => clearInterval(timer);
   }, [index, text]);
-
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  }, []);
 
   return (
     <section

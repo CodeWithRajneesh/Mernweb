@@ -21,7 +21,10 @@ const Button = () => {
       onClick={() => handleClick("contact")}
       className="text-white bg-blue-700 hover:bg-slate-300 hover:text-black border border-sky-700 font-medium rounded-full text-md sm:px-6 px-3 p-1 py-1 sm:py-2 text-center me-2 mb-2"
     >
-      <div className="flex text-sm items-center gap-3 tracking-widest justify-center">
+      <div
+        data-aos="fade-up"
+        className="flex text-sm items-center gap-3 tracking-widest justify-center"
+      >
         Let's talk
         <svg
           className="h-5 w-5 text-black mr-2"
