@@ -52,7 +52,7 @@ const ContactForm = () => {
       <div className="grid grid-cols-1  gap-8 px-4 py-4 mx-auto border border-gray-900 md:grid-cols-2  dark:text-gray-800">
         <div
           data-aos="zoom-in-up"
-          className="flex flex-col bg-gray-950 gap-4 p-8 shadow-2xl "
+          className="flex flex-col hover:shadow-2xl hover:shadow-pink-600 bg-gray-950 gap-4 p-8 shadow-2xl "
         >
           <strong className="text-3xl text-yellow-400">
             Get in touch with me
@@ -176,7 +176,7 @@ const ContactForm = () => {
         <form
           data-aos="fade-up"
           onSubmit={handleSubmit}
-          className="p-8 space-y-6 shadow-2xl bg-gray-950"
+          className="p-8 space-y-6 hover:shadow-2xl hover:shadow-pink-600 shadow-2xl bg-gray-950"
         >
           <div>
             <label htmlFor="username" className=" text-yellow-400 text-xl">
