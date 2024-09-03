@@ -70,7 +70,7 @@ const Register = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="w-full lg:w-[35%] bg-gray-950 hover:shadow-2xl hover:shadow-cyan-400 p-2 mt-1 rounded-md0 lg:mt-0 "
+            className="w-full lg:w-[35%] sm:bg-gray-950 bg-gray-900 hover:shadow-2xl hover:shadow-cyan-400 p-2 mt-1 rounded-md0 lg:mt-0 "
           >
             <form onSubmit={handleSubmit} className="mx-auto w-[90%] p-2">
               <div className="mb-4">
