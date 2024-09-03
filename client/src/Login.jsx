@@ -76,7 +76,7 @@ const Login = () => {
       >
         <form
           onSubmit={handleSubmit}
-          className="mx-auto  mt-8 sm:bg-gray-950 bg-gray-900  max-w-md space-y-4 shadow-2xl p-9 hover:shadow-pink-500"
+          className="mx-auto  mt-8 bg-gray-950 max-w-md space-y-4 shadow-2xl p-9 hover:shadow-pink-500"
         >
           <div>
             <label
