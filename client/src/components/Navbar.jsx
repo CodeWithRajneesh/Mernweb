@@ -13,8 +13,12 @@ const Navbar = () => {
   return (
     <header className="bg-black text-white fixed top-0 left-0 w-full p-3 z-50">
       <nav className="container mx-auto flex items-center justify-between">
-        <div className="text-xl text-yellow-400 md:text-2xl font-bold tracking-widest">
-          Rajneesh Kumar
+        <div>
+          <img
+            className="h-11 w-11"
+            src="https://cdn.pixabay.com/photo/2017/02/18/19/20/logo-2078018_1280.png"
+            alt="sitelogo"
+          />
         </div>
         <div className="md:hidden">
           <button
