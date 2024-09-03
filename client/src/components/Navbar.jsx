@@ -44,7 +44,7 @@ const Navbar = () => {
         <ul
           className={`${
             isOpen ? "block" : "hidden"
-          } md:flex md:items-center md:space-x-10 absolute md:relative top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left mt-2 md:mt-0`}
+          } md:flex md:items-center md:space-x-10 absolute md:relative top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left  md:mt-0`}
         >
           <li>
             <NavLink
