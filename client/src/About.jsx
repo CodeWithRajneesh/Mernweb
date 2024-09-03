@@ -62,7 +62,7 @@ const About = () => {
               Frequently Asked Questions
             </h3>
             <p
-              data-aos="fade-left"
+              data-aos="fade-right"
               className="text-gray-400 text-sm sm:text-base"
             >
               Do you have any questions about my services? Check out my FAQ

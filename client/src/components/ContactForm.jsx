@@ -52,7 +52,7 @@ const ContactForm = () => {
       <div className="grid grid-cols-1  gap-8 px-4 py-4 mx-auto border border-gray-900 md:grid-cols-2  dark:text-gray-800">
         <div
           data-aos="zoom-in-up"
-          className="flex flex-col bg-gray-900 gap-4 p-8 shadow-2xl "
+          className="flex flex-col bg-gray-950 gap-4 p-8 shadow-2xl "
         >
           <strong className="text-3xl text-yellow-400">
             Get in touch with me
@@ -87,12 +87,12 @@ const ContactForm = () => {
 
             <div className="mx-5">
               <h2
-                data-aos="zoom-up"
+                data-aos="zoom-in"
                 className="text-xl text-yellow-400 my-1 font-bold"
               >
                 Address
               </h2>
-              <p data-aos="slide-right" className="text-gray-400">
+              <p data-aos="fade-up" className="text-gray-400">
                 Vill-Karaura, Teh-Meerganj, Dist-Bareilly, Pincode-243504
               </p>
             </div>
@@ -124,12 +124,12 @@ const ContactForm = () => {
             </Link>
             <div className="mx-5">
               <h2
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 className="text-xl my-1 text-yellow-400 font-bold"
               >
                 Call Us
               </h2>
-              <p data-aos="slide-right" className="text-gray-400">
+              <p data-aos="fade-up" className="text-gray-400">
                 +91 7248362369
               </p>
             </div>
@@ -161,7 +161,7 @@ const ContactForm = () => {
             </Link>
             <div className="mx-5">
               <h2
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 className="text-xl my-1 text-yellow-400  font-bold"
               >
                 Email Us
@@ -176,7 +176,7 @@ const ContactForm = () => {
         <form
           data-aos="fade-up"
           onSubmit={handleSubmit}
-          className="p-8 space-y-6 shadow-2xl bg-gray-900"
+          className="p-8 space-y-6 shadow-2xl bg-gray-950"
         >
           <div>
             <label htmlFor="username" className=" text-yellow-400 text-xl">
@@ -186,7 +186,7 @@ const ContactForm = () => {
               id="username"
               type="text"
               name="username"
-              className="w-full p-2 my-3  placeholder-slate-200 text-white bg-gray-800"
+              className="w-full p-2 my-3  placeholder-slate-400 text-white bg-gray-900"
               placeholder="Enter username"
               required
               autoComplete="off"
@@ -202,7 +202,7 @@ const ContactForm = () => {
               name="email"
               id="email"
               type="email"
-              className="w-full p-2 my-3 bg-gray-800  placeholder-slate-200 text-white  "
+              className="w-full p-2 my-3 bg-gray-900  placeholder-slate-400 text-white  "
               placeholder="Enter email"
               required
               autoComplete="off"
@@ -219,7 +219,7 @@ const ContactForm = () => {
               name="message"
               rows="3"
               placeholder="Type message here"
-              className="w-full p-2 my-3  placeholder-slate-200 text-white bg-gray-800 "
+              className="w-full p-2 my-3  placeholder-slate-400 text-white bg-gray-900 "
               required
               autoComplete="off"
               value={form.message}

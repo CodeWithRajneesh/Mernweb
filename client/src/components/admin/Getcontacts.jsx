@@ -2,22 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth } from "../../store/Auth";
 import { toast } from "react-toastify";
+import useAOS from "../../customhook/CustomHook";
 
 const GetContacts = () => {
   const [contacts, setContacts] = useState([]);
-
+  useAOS();
   const { token, url } = useAuth();
 
   const fetchAllContacts = async () => {
     try {
-      const response = await axios.get(
-        `${url}/api/admin/contacts`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/contacts`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       setContacts(response.data);
     } catch (error) {
       console.error("Error fetching contacts:", error);
@@ -52,7 +50,7 @@ const GetContacts = () => {
 
   return (
     <div className="w-full p-4 ">
-      <div className="flex flex-wrap gap-5 justify-center">
+      <div data-aos="fade-up" className="flex flex-wrap gap-5 justify-center">
         {contacts.length ? (
           contacts.map((contact) => (
             <div
@@ -60,14 +58,16 @@ const GetContacts = () => {
               className="w-full sm:w-80 md:w-96 lg:w-[22rem] h-auto p-4 bg-gray-900  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 flex flex-col"
             >
               <div className="text-gray-300 ">
-              <h6 className="text-extrabold text-lg font-mono">
-                      <b className="text-yellow-400" >Username:</b> {contact.username}
-                    </h6>
-                  <h6 className="text-extrabold text-lg font-mono">
+                <h6 className="text-extrabold text-lg font-mono">
+                  <b className="text-yellow-400">Username:</b>{" "}
+                  {contact.username}
+                </h6>
+                <h6 className="text-extrabold text-lg font-mono">
                   <b className="  text-yellow-400  ">Email:</b> {contact.email}
                 </h6>
                 <h6 className="text-extrabold text-lg font-mono">
-                  <b className="  text-yellow-400  ">Email:</b> {contact.message}
+                  <b className="  text-yellow-400  ">Email:</b>{" "}
+                  {contact.message}
                 </h6>
               </div>
               <div className="mt-4 flex justify-end">

@@ -3,24 +3,23 @@ import { useAuth } from "../../store/Auth";
 import axios from "axios";
 import { toast } from "react-toastify";
 import UpdateUser from "./UserModal";
+import useAOS from "../../customhook/CustomHook";
 
 const Getusers = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
   const [users, setUsers] = useState([]);
-  const { authorizationToken,url } = useAuth();
+  const { authorizationToken, url } = useAuth();
 
+  useAOS();
   // Fetch all users
   const fetchAllUsers = async () => {
     try {
-      const response = await axios.get(
-        `${url}/api/admin/users`,
-        {
-          headers: {
-            Authorization: authorizationToken,
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/admin/users`, {
+        headers: {
+          Authorization: authorizationToken,
+        },
+      });
       setUsers(response.data);
     } catch (error) {
       console.error("Getting users error:", error);
@@ -68,7 +67,7 @@ const Getusers = () => {
   return (
     <>
       <div className=" p-4">
-        <div className="flex flex-wrap gap-5 justify-center">
+        <div data-aos="fade-up" className="flex flex-wrap gap-5 justify-center">
           {users.map((curUser) => {
             const { _id, username, email, phone } = curUser;
             return (
@@ -78,11 +77,9 @@ const Getusers = () => {
               >
                 <div className="text-gray-300 mb-4">
                   <h6 className="text-extrabold text-lg font-mono">
-                    <b className="text-yellow-400">Username:</b>{" "}
-                    {username}
+                    <b className="text-yellow-400">Username:</b> {username}
                   </h6>
-                  <h6
-                 className="text-extrabold text-lg font-mono">
+                  <h6 className="text-extrabold text-lg font-mono">
                     <b className="text-yellow-400">Email:</b> {email}
                   </h6>
                   <h6 className="text-extrabold text-lg font-mono">
