@@ -39,7 +39,7 @@ const Register = () => {
           phone: "",
           password: "",
         });
-        navigate("/login");
+        navigate("/");
       }
     } catch (error) {
       if (error.response && error.response.data) {
